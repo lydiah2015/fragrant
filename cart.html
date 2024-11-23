@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragrant</title>
+    <link rel="stylesheet" href="style/index.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <!-- <ul> -->
+        <a href="./index.html" id="navItems">Fragrant</a>
+
+        <!-- <div class="nav1"> -->
+        <a href="./about.html" id="navItems">About Us</a>
+        <a href="./contact.html" id="navItems">Contact Us</a>
+        <a href="./profile.html" id="navItems">Profile</a>
+        <a href="./cart.html" id="navItems">Shopping Cart</a>
+        <button class="loginbtn">LOGIN/SIGN UP</button>
+        <!-- </div> -->
+        <!-- </ul> -->
+      </div>
+    </nav>
+
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <button id="buy-now" style="display: none; margin-top: 20px">
+      Buy Now
+    </button>
+
+    <script>
+      // Retrieve cart items from localStorage
+      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+      const cartItemsContainer = document.getElementById("cart-items");
+      const buyNowButton = document.getElementById("buy-now");
+
+      // Display cart items
+      if (cartItems.length > 0) {
+        cartItems.forEach((item) => {
+          const itemElement = document.createElement("p");
+          itemElement.textContent = item;
+          cartItemsContainer.appendChild(itemElement);
+        });
+
+        // Show "Buy Now" button when items are in the cart
+        buyNowButton.style.display = "block";
+        buyNowButton.onclick = function () {
+          alert("Proceed to checkout!");
+        };
+      } else {
+        cartItemsContainer.textContent = "Your cart is empty.";
+      }
+    </script>
+  </body>
+</html>

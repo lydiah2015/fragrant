@@ -1,0 +1,84 @@
+.navbar{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+background-color:black;
+padding: 25px;
+
+}
+#navItems{
+color: gold;
+text-decoration: none;
+font-size: 25px;
+font-family: cursive;
+}
+body{
+    /* padding: 0px; */
+    margin:0px;
+    
+}
+.loginbtn{
+    /* margin: 40px; */
+    padding:10px;
+    color: gold;
+    border-color: gold;
+    background-color: black;
+    border-radius: 8px;
+
+}
+/* #perfumes{ */
+    /* width: 5%;
+    height:3%; */
+    
+/* } */
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s; 
+    width:10%;
+    /* height:30%; */
+    /* padding: 2%; */
+    background-color: bisque;
+        border-radius: 8px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .container {
+    padding: 2px 16px;
+    /* border-radius: 8px; */
+  }
+  .cards{
+    display: flex;
+    flex-direction: row;
+  }
+  .c-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .subTitle{
+    text-align: center;
+    font-size: 30px;
+    font-family: cursive;
+    color: gold;
+    font-weight: bolder;
+
+  }
+  .subTitle:hover{
+    color: black;
+    font-size: 40px;
+  }
+  .click-jack{
+    text-align: center;
+  }
+
+
+  .title span{
+    display: flex;
+    width :20px;
+    height:20px;
+    background-color: red;
+    justify-content: center;
+
+  }
